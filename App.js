@@ -9,11 +9,11 @@
 import React, {useEffect, useState} from 'react';
 // import type {Node} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import PropsChild from './src/propsChild';
 
 const App = () => {
-  const [sampleText, setSampleText] = useState('First React Native App');
   const [sampleBoolean, setSampleBoolean] = useState(false);
-  const [sampleNum, setSampleNum] = useState(1);
+  const [addText, setAddText] = useState('Parents Text');
 
   const inputText = () => {
     sampleBoolean ? (
@@ -23,23 +23,9 @@ const App = () => {
     );
   };
 
-  const changeState = () => {
-    // if (!sampleBoolean) {
-    //   setSampleText('Text Changed');
-    // } else {
-    //   setSampleText('First React Native App');
-    // }
-    setSampleText('Text Changed');
-  };
-
-  const onAdd = () => {
-    setSampleNum(sampleNum + 1);
-  };
-
   return (
     <View style={styles.background}>
-      <Text onPress={changeState}>{sampleText}</Text>
-      <Text onPress={onAdd}>{sampleNum}</Text>
+      <PropsChild addText={addText} setAddText={setAddText} />
     </View>
   );
 };
