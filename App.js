@@ -6,14 +6,18 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, ActivityIndicator} from 'react-native';
-import {Container, Title, Paragraph, ViewWrap} from './styles/style';
+import Header from './src/header';
+import {Container, Paragraph, ViewWrap} from './styles/style';
 
 const App = () => {
+  const [appName, setAppName] = useState('My First React-Native App');
+
   return (
     <Container>
-      <Title>First React Native</Title>
+      <Header appName={appName} />
+      {/* <Title>First React Native</Title> */}
       <ActivityIndicator style={styles.horizontal} size='large' />
       <ViewWrap>
         <Paragraph>paragraph1</Paragraph>

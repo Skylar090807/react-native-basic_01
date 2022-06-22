@@ -4,6 +4,6 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     jsx: true,
-    ecmaVersion: 2020,
-  },
+    ecmaVersion: 2020
+  }
 };
