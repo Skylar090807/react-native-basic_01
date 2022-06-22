@@ -6,37 +6,31 @@
  * @flow strict-local
  */
 
-import React, {useEffect, useState} from 'react';
-// import type {Node} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import PropsChild from './src/propsChild';
+import React from 'react';
+import {StyleSheet, ActivityIndicator} from 'react-native';
+import {Container, Title, Paragraph, ViewWrap} from './styles/style';
 
 const App = () => {
-  const [sampleBoolean, setSampleBoolean] = useState(false);
-  const [addText, setAddText] = useState('Parents Text');
-
-  const inputText = () => {
-    sampleBoolean ? (
-      <Text>SampleBoolean is True</Text>
-    ) : (
-      <Text>SampleBoolean is False</Text>
-    );
-  };
-
   return (
-    <View style={styles.background}>
-      <PropsChild addText={addText} setAddText={setAddText} />
-    </View>
+    <Container>
+      <Title>First React Native</Title>
+      <ActivityIndicator style={styles.horizontal} size='large' />
+      <ViewWrap>
+        <Paragraph>paragraph1</Paragraph>
+      </ViewWrap>
+      <ViewWrap>
+        <Paragraph>paragraph2</Paragraph>
+      </ViewWrap>
+      <ViewWrap>
+        <Paragraph>paragraph3</Paragraph>
+      </ViewWrap>
+    </Container>
   );
 };
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 'bold'
+  horizontal: {
+    padding: 20
   }
 });
 
