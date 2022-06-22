@@ -30,7 +30,7 @@ export const Title = styled.Text`
 `;
 
 export const Paragraph = styled.Text`
-  font-size: 20;
+  font-size: 20px;
 `;
 
 //header.jsx

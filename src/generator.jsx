@@ -7,9 +7,10 @@
  */
 
 import React from 'react';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {Container, Title, TochableWrap} from '../styles/style';
 
-const Header = ({appName}) => {
+const Generator = ({appName}) => {
   return (
     <TochableWrap //
       // onPress={() => alert('Toched Title!!')}
@@ -23,4 +24,4 @@ const Header = ({appName}) => {
   );
 };
 
-export default Header;
+export default Generator;
