@@ -1,9 +1,9 @@
 import React from 'react';
 import {TextWrap, NumListText} from '../styles/style';
 
-const NumList = ({randomNumber}) => {
+const NumList = ({randomNumber, onDeleteNum}) => {
   return randomNumber.map((item, idx) => (
-    <TextWrap key={idx}>
+    <TextWrap key={idx} onPress={() => onDeleteNum(idx)}>
       <NumListText>{item}</NumListText>
     </TextWrap>
   ));

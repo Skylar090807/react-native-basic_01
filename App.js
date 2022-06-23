@@ -7,11 +7,11 @@
  */
 
 import React, {useState} from 'react';
-import {StyleSheet, ActivityIndicator} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import Generator from './src/generator';
 import Header from './src/header';
 import NumList from './src/numlist';
-import {Container, Paragraph, ViewWrap} from './styles/style';
+import {Container, ViewWrap} from './styles/style';
 
 const App = () => {
   const [appName, setAppName] = useState('My First React-Native App');
@@ -23,6 +23,16 @@ const App = () => {
     setRandomNumber(randomNumber => [...randomNumber, randomNumGenerator]);
   };
 
+  const onDeleteNum = position => {
+    // alert('Delete Number');
+    // setRandomNumber(
+    //   randomNumber.filter((num, idx) => {
+    //     return position !== idx;
+    //   })
+    // );
+    setRandomNumber(randomNumber.filter((num, idx) => position !== idx));
+  };
+
   return (
     <Container>
       <Header appName={appName} />
@@ -30,11 +40,12 @@ const App = () => {
       {/* <ActivityIndicator style={styles.horizontal} size='large' /> */}
       <ViewWrap>
         <Generator onAddRandomNum={onAddRandomNum} />
-        <NumList randomNumber={randomNumber} />
+        <ScrollView
+          style={{width: '100%'}}
+          onMomentumScrollBegin={() => alert('scrolled!!')}>
+          <NumList randomNumber={randomNumber} onDeleteNum={onDeleteNum} />
+        </ScrollView>
       </ViewWrap>
-      {/* <ViewWrap>
-        <Paragraph>paragraph1</Paragraph>
-      </ViewWrap> */}
     </Container>
   );
 };

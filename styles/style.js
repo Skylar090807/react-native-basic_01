@@ -51,7 +51,7 @@ export const ButtonWrap = styled.View`
 `;
 
 //numlist.jsx
-export const TextWrap = styled.View`
+export const TextWrap = styled.TouchableOpacity`
   background-color: #cecece;
   align-items: center;
   padding: 10px;
