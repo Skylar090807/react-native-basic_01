@@ -10,6 +10,7 @@ import React, {useState} from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
 import Generator from './src/generator';
 import Header from './src/header';
+import Input from './src/intput';
 import NumList from './src/numlist';
 import {Container, ViewWrap} from './styles/style';
 
@@ -49,6 +50,9 @@ const App = () => {
           bounces={true}>
           <NumList randomNumber={randomNumber} onDeleteNum={onDeleteNum} />
         </ScrollView>
+      </ViewWrap>
+      <ViewWrap>
+        <Input />
       </ViewWrap>
     </Container>
   );

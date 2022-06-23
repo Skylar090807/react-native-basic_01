@@ -26,6 +26,7 @@ export const Title = styled.Text`
   padding: 20px;
   border-radius: 30px;
   color: #fff;
+  margin-top: 10px;
 `;
 
 export const Paragraph = styled.Text`
@@ -63,4 +64,12 @@ export const NumListText = styled.Text`
   color: #fff;
   font-size: 25px;
   font-weight: bold;
+`;
+
+//input.jsx
+export const TextInputWrap = styled.TextInput`
+  background-color: #ececec;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
 `;
