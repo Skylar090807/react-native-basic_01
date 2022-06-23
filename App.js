@@ -42,7 +42,11 @@ const App = () => {
         <Generator onAddRandomNum={onAddRandomNum} />
         <ScrollView
           style={{width: '100%'}}
-          onMomentumScrollBegin={() => alert('scrolled!!')}>
+          // onMomentumScrollBegin={() => alert('scroll start!!')}
+          // onMomentumScrollEnd={() => alert('scroll end!!')}
+          // onScroll={() => alert('scrolling!!')}
+          // onContentSizeChange={(width, height) => alert(height)}
+          bounces={true}>
           <NumList randomNumber={randomNumber} onDeleteNum={onDeleteNum} />
         </ScrollView>
       </ViewWrap>
