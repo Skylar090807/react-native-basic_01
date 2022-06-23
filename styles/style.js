@@ -10,7 +10,7 @@ export const Container = styled.View`
 `;
 
 export const ViewWrap = styled.View`
-  flex: 1;
+  flex: 2;
   background-color: lightblue;
   align-items: center;
   justify-content: center;
@@ -20,8 +20,7 @@ export const ViewWrap = styled.View`
 `;
 
 export const Title = styled.Text`
-  margin-top: 20;
-  font-size: 33;
+  font-size: 33px;
   font-weight: bold;
   background-color: lightpink;
   padding: 20px;
@@ -30,7 +29,8 @@ export const Title = styled.Text`
 `;
 
 export const Paragraph = styled.Text`
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
 `;
 
 //header.jsx
@@ -38,4 +38,29 @@ export const TochableWrap = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
   justify-content: center;
+`;
+
+//generator.jsx
+export const ButtonWrap = styled.View`
+  padding: 16px;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: lightyellow;
+`;
+
+//numlist.jsx
+export const TextWrap = styled.View`
+  background-color: #cecece;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 3px;
+`;
+
+export const NumListText = styled.Text`
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
 `;
