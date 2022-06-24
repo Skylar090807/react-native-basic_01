@@ -12,8 +12,8 @@ export const Container = styled.View`
 export const ViewWrap = styled.View`
   flex: 2;
   background-color: lightblue;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   border-radius: 30px;
   margin-top: 10px;
   width: 100%;
@@ -29,9 +29,20 @@ export const Title = styled.Text`
   margin-top: 10px;
 `;
 
-export const Paragraph = styled.Text`
+export const AddedView = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+`;
+
+export const AddedText = styled.Text`
   font-size: 24px;
   font-weight: bold;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 60px;
+  width: 50%;
+  text-align: center;
 `;
 
 //header.jsx
