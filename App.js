@@ -12,6 +12,7 @@ import Generator from './src/generator';
 import Header from './src/header';
 import Input from './src/intput';
 import NumList from './src/numlist';
+import SliderComponent from './src/slider';
 import {
   Container,
   ViewWrap,
@@ -65,7 +66,7 @@ const App = () => {
   return (
     <Container>
       <Header appName={appName} />
-
+      <SliderComponent />
       {/* <ActivityIndicator style={styles.horizontal} size='large' /> */}
       {/* <ViewWrap>
         <Generator onAddRandomNum={onAddRandomNum} />
